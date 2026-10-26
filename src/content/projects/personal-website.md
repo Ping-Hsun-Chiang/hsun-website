@@ -1,20 +1,15 @@
 ---
 title: 個人履歷網站
-summary: 使用 Astro 打造的靜態履歷網站，內容與版面分離，新增專案只需新增一個 Markdown 檔。
-date: 2026-10-26
-tags: [Astro, TypeScript, CSS, GitHub Pages]
-github: https://github.com/Ping-Hsun-Chiang/hsun-website
-demo: https://ping-hsun-chiang.github.io/hsun-website/
-order: 2
+subtitle: Personal Website
+summary: 以 Hugo 搭配 PaperMod 主題建置的個人形象網站，並透過 GitHub Actions 自動部署至 GitHub Pages。
+date: 2026-02-01
+tags: [Hugo, HTML, CSS, GitHub Pages, Static Site]
+github: https://github.com/Ping-Hsun-Chiang/personal-website
+demo: https://ping-hsun-chiang.github.io/personal-website/
 ---
 
-## 解決什麼問題
+為了建立專屬的線上數位履歷以集中展示個人經歷，我使用 Hugo 靜態網站產生器搭配 PaperMod 主題建置了個人形象網站。
 
-需要一個可以長期維護、方便更新的線上作品集，讓企業快速了解我的背景與作品。
+在開發過程中，我運用 HTML 與 CSS 針對佈局與視覺樣式進行客製化調整。
 
-## 技術重點
-
-- 以 Astro Content Collections 管理專案，欄位有型別檢查
-- 響應式設計，手機與桌機皆可良好瀏覽
-- 自動跟隨系統深色 / 淺色模式
-- 推送到 GitHub 後由 GitHub Actions 自動建置部署
+此外，為了解決每次更新內容都需要手動發布的繁瑣流程，我透過 GitHub Actions 建立自動化工作流程，將網站自動部署至 GitHub Pages 上，確保個人的線上履歷與資訊能高效、穩定地保持在最新狀態。
