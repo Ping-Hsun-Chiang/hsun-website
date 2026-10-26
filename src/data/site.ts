@@ -27,45 +27,84 @@ export const contact = {
 
 // 技能：可自由新增分類或項目
 export const skills: { category: string; items: string[] }[] = [
-  { category: '程式語言', items: ['Python', 'TypeScript', 'JavaScript', 'SQL'] },
-  { category: '框架與函式庫', items: ['FastAPI', 'Pandas', 'Astro', 'React'] },
-  { category: '工具與平台', items: ['Git / GitHub', 'GitHub Actions', 'Docker', 'Linux'] },
-  { category: '資料庫', items: ['PostgreSQL', 'SQLite', 'Redis'] },
+  { category: '程式語言', items: ['Python', 'R', 'JavaScript', 'HTML / CSS', 'Bash'] },
+  { category: 'AI / 機器學習框架', items: ['TensorFlow', 'Keras', 'Scikit-learn', 'JAX', 'XGBoost'] },
+  { category: '資料處理與分析', items: ['NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'SQL'] },
+  { category: '統計與建模', items: ['空間統計', '克利金模型', '非線性迴歸', '貝氏推論', '時間序列'] },
+  { category: '工程與開發工具', items: ['Git', 'Linux / WSL', 'Docker', 'Google Apps Script', 'REST API'] },
+  { category: '雲端 / 部署', items: ['GitHub Pages', 'Google Sheets API', 'Meta Graph API'] },
 ];
 
-// 經歷：由新到舊排列。type 可填 'work'（工作）或 'education'（學歷）
+// 經歷：由新到舊排列
 export const experience: {
-  type: 'work' | 'education';
   period: string;
-  title: string;
   org: string;
-  points: string[];
+  title: string;
+  desc: string;
 }[] = [
   {
-    type: 'work',
-    period: '2024 – 至今',
-    title: '後端工程師',
-    org: '某某科技股份有限公司',
-    points: [
-      '負責內部資料平台 API 設計與開發，服務 5 個以上部門',
-      '導入 CI/CD 流程，部署時間由 30 分鐘縮短至 5 分鐘',
-    ],
+    period: '2026.03 — 2026.06',
+    org: '奕福穎科技股份有限公司',
+    title: 'AI 實習工程師',
+    desc: '參與公司 AI 相關專案開發，負責模型實作與測試驗證工作。',
   },
   {
-    type: 'work',
-    period: '2022 – 2024',
-    title: '軟體工程師',
-    org: '某某資訊有限公司',
-    points: [
-      '開發報表自動化工具，每月節省約 40 小時人工作業',
-      '維護既有系統並撰寫單元測試，測試覆蓋率提升至 80%',
-    ],
+    period: '2025.10 — 2026.01',
+    org: '經濟部 AI 新秀計畫',
+    title: '培訓人員',
+    desc: '系統性學習生成式 AI、LLM 應用及 AI 工具鏈，完成多項實作任務與專案提案。',
   },
   {
-    type: 'education',
-    period: '2018 – 2022',
-    title: '資訊工程學系 學士',
-    org: '某某大學',
-    points: ['專題：以機器學習預測股價波動'],
+    period: '2025.06 — 2025.07',
+    org: '韓國首爾大學統計學系',
+    title: '國際交換研究生',
+    desc: '與首爾大學空間統計研究室進行學術交流，探討大規模球面空間預測方法。',
+  },
+  {
+    period: '2025.05',
+    org: '印尼 UNY 數學系',
+    title: '統計程式課程助教',
+    desc: '協助指導教授對當地學生進行 R 語言統計程式教學，具備技術知識轉移與跨文化溝通能力。',
+  },
+  {
+    period: '2023.07 — 2026.01',
+    org: '東華空間統計研究室',
+    title: '研究助理',
+    desc: '主導 Spherical DeepKriging 模型設計與實驗，負責大規模氣象數據收集、前處理、基底函數建構及模型比較驗證，產出碩士論文並通過口試。',
+  },
+  {
+    period: '2023.07 — 2026.01',
+    org: '東部運輸中心',
+    title: '計畫負責人',
+    desc: '蒐集花東地區公共運輸資料，運用 R 語言進行統計分析與視覺化，產出報告並提供主管機關優化建議。',
+  },
+];
+
+// 學歷：由新到舊排列。level、degree 可省略
+export const education: {
+  period: string;
+  school: string;
+  level?: string;
+  degree?: string;
+}[] = [
+  {
+    period: '2023.07 — 2026.01',
+    school: '國立東華大學',
+    level: '碩士',
+    degree: '應用數學系 統計碩士班',
+  },
+  {
+    period: '2019.09 — 2023.06',
+    school: '國立東華大學',
+    level: '學士',
+    degree: '應用數學系 統計科學組',
+  },
+  {
+    period: '2016.09 — 2019.06',
+    school: '國立北門高級中學',
+  },
+  {
+    period: '2013.09 — 2016.06',
+    school: '私立黎明高級中學',
   },
 ];

@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import { profile, contact, skills, experience } from '../data/site';
+import { profile, contact, skills, experience, education } from '../data/site';
 
 const projects = (await getCollection('projects')).sort(
   (a, b) => a.data.order - b.data.order || b.data.date.getTime() - a.data.date.getTime(),
@@ -53,7 +53,7 @@ const projects = (await getCollection('projects')).sort(
 
   <!-- 經歷 -->
   <section id="experience">
-    <h2 class="section-title">經歷與學歷</h2>
+    <h2 class="section-title">經歷</h2>
     <div class="card pad">
       <ol class="timeline">
         {
@@ -61,12 +61,32 @@ const projects = (await getCollection('projects')).sort(
             <li>
               <div class="period">{e.period}</div>
               <div>
-                <h3 class="exp-title">
-                  {e.title}
-                  <span class="badge">{e.type === 'work' ? '工作' : '學歷'}</span>
+                <h3 class="item-title">{e.org}</h3>
+                <p class="sub">{e.title}</p>
+                <p class="desc">{e.desc}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <!-- 學歷 -->
+  <section id="education">
+    <h2 class="section-title">學歷</h2>
+    <div class="card pad">
+      <ol class="timeline">
+        {
+          education.map((e) => (
+            <li>
+              <div class="period">{e.period}</div>
+              <div>
+                <h3 class="item-title">
+                  {e.school}
+                  {e.level && <span class="badge">{e.level}</span>}
                 </h3>
-                <p class="org">{e.org}</p>
-                <ul>{e.points.map((p) => <li>{p}</li>)}</ul>
+                {e.degree && <p class="sub">{e.degree}</p>}
               </div>
             </li>
           ))
@@ -165,7 +185,7 @@ const projects = (await getCollection('projects')).sort(
   }
   .timeline > li {
     display: grid;
-    grid-template-columns: 130px 1fr;
+    grid-template-columns: 150px 1fr;
     gap: 16px;
     padding: 16px 0;
     border-bottom: 1px dashed var(--border);
@@ -183,7 +203,7 @@ const projects = (await getCollection('projects')).sort(
     font-variant-numeric: tabular-nums;
     padding-top: 2px;
   }
-  .exp-title {
+  .item-title {
     margin: 0;
     font-size: 1.05rem;
     display: flex;
@@ -198,14 +218,14 @@ const projects = (await getCollection('projects')).sort(
     border: 1px solid var(--border);
     color: var(--muted);
   }
-  .org {
-    margin: 0 0 6px;
-    color: var(--muted);
-    font-size: 0.92rem;
-  }
-  .timeline ul {
+  .sub {
     margin: 0;
-    padding-left: 1.2em;
+    color: var(--accent);
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+  .desc {
+    margin: 4px 0 0;
     font-size: 0.95rem;
   }
 
