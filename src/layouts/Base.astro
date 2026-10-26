@@ -1,0 +1,56 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import { profile } from '../data/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description = profile.tagline } = Astro.props;
+const pageTitle = title ? `${title}｜${profile.name}` : `${profile.name}｜${profile.title}`;
+---
+
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="container footer">
+      © {new Date().getFullYear()} {profile.name}・以 Astro 建置
+    </footer>
+  </body>
+</html>
+
+<style>
+  main {
+    padding-bottom: 40px;
+  }
+  .footer {
+    padding-top: 24px;
+    padding-bottom: 40px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+</style>

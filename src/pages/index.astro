@@ -1,0 +1,235 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { profile, contact, skills, experience } from '../data/site';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => a.data.order - b.data.order || b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<Base>
+  <!-- Hero -->
+  <section>
+    <div class="card hero">
+      <p class="hello">嗨，我是</p>
+      <h1>{profile.name}</h1>
+      <p class="role">{profile.title}</p>
+      <p class="tagline">{profile.tagline}</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">聯絡我</a>
+        <a class="btn" href="#projects">看作品</a>
+        {profile.resumeUrl && (
+          <a class="btn" href={`${import.meta.env.BASE_URL}${profile.resumeUrl.replace(/^\//, '')}`} download>
+            下載履歷 PDF
+          </a>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- 關於 + 技能 -->
+  <section id="about" class="two-col">
+    <div class="card pad">
+      <h2 class="section-title">關於我</h2>
+      {profile.about.map((p) => <p class="about-p">{p}</p>)}
+      <p class="meta">📍 {profile.location}</p>
+    </div>
+    <div class="card pad">
+      <h2 class="section-title">技能</h2>
+      <div class="skills">
+        {
+          skills.map((s) => (
+            <div>
+              <h3 class="skill-cat">{s.category}</h3>
+              <div class="tags">{s.items.map((i) => <span class="tag">{i}</span>)}</div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- 經歷 -->
+  <section id="experience">
+    <h2 class="section-title">經歷與學歷</h2>
+    <div class="card pad">
+      <ol class="timeline">
+        {
+          experience.map((e) => (
+            <li>
+              <div class="period">{e.period}</div>
+              <div>
+                <h3 class="exp-title">
+                  {e.title}
+                  <span class="badge">{e.type === 'work' ? '工作' : '學歷'}</span>
+                </h3>
+                <p class="org">{e.org}</p>
+                <ul>{e.points.map((p) => <li>{p}</li>)}</ul>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <!-- 專案 -->
+  <section id="projects">
+    <h2 class="section-title">專案作品</h2>
+    <div class="grid">
+      {projects.map((p) => <ProjectCard project={p} />)}
+    </div>
+  </section>
+
+  <!-- 聯絡 -->
+  <section id="contact">
+    <div class="card pad contact">
+      <h2 class="section-title">聯絡我</h2>
+      <p>對我的經歷有興趣，或有合作機會，歡迎與我聯繫！</p>
+      <div class="actions">
+        <a class="btn btn-primary" href={`mailto:${contact.email}`}>✉ {contact.email}</a>
+        {contact.github && <a class="btn" href={contact.github} target="_blank" rel="noopener">GitHub</a>}
+        {contact.linkedin && <a class="btn" href={contact.linkedin} target="_blank" rel="noopener">LinkedIn</a>}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .pad {
+    padding: 24px 26px;
+  }
+  .hero {
+    padding: 48px 40px;
+    background:
+      radial-gradient(circle at 100% 0%, var(--accent-soft), transparent 55%),
+      var(--surface);
+  }
+  .hello {
+    margin: 0;
+    color: var(--muted);
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    line-height: 1.25;
+  }
+  .role {
+    margin: 4px 0 12px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .tagline {
+    margin: 0 0 24px;
+    color: var(--muted);
+    max-width: 36em;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+  }
+  .about-p {
+    margin: 0 0 10px;
+  }
+  .meta {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .skill-cat {
+    margin: 0 0 6px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .timeline > li {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .timeline > li:first-child {
+    padding-top: 0;
+  }
+  .timeline > li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .period {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-variant-numeric: tabular-nums;
+    padding-top: 2px;
+  }
+  .exp-title {
+    margin: 0;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .badge {
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .org {
+    margin: 0 0 6px;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .timeline ul {
+    margin: 0;
+    padding-left: 1.2em;
+    font-size: 0.95rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .contact p {
+    margin: 0 0 16px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 760px) {
+    .two-col {
+      grid-template-columns: 1fr;
+    }
+    .hero {
+      padding: 32px 24px;
+    }
+    .timeline > li {
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+  }
+</style>

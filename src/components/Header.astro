@@ -1,0 +1,59 @@
+---
+import { profile } from '../data/site';
+
+const base = import.meta.env.BASE_URL;
+const links = [
+  { href: '#about', label: '關於' },
+  { href: '#experience', label: '經歷' },
+  { href: '#projects', label: '專案' },
+  { href: '#contact', label: '聯絡' },
+];
+---
+
+<header>
+  <div class="container bar">
+    <a class="brand" href={base}>{profile.name}</a>
+    <nav>
+      {links.map((l) => <a href={`${base}${l.href}`}>{l.label}</a>)}
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  nav a:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
+  @media (max-width: 480px) {
+    nav {
+      gap: 14px;
+    }
+  }
+</style>

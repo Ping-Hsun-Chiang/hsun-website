@@ -1,0 +1,21 @@
+# <type>: <English summary>
+#
+# <中文補充說明（選填）>
+# - 要點一
+# - 要點二
+#
+# ── 規則 ──────────────────────────────────────────
+# 標題：英文、祈使句、小寫開頭、結尾不加句號、50 字元內
+#   ✔ feat: add skills section
+#   ✘ Added skills section.
+# 內文：中文補充「做了什麼、為什麼」，與標題空一行
+#
+# type：
+#   feat     新功能、新區塊、新頁面
+#   fix      修正錯誤
+#   content  更新履歷內容（經歷、專案、技能、文字）
+#   style    外觀、排版、顏色調整
+#   refactor 重構，不影響功能與外觀
+#   docs     文件（README 等）
+#   chore    設定、套件、雜項
+#   ci       部署流程（GitHub Actions）
