@@ -20,9 +20,9 @@ export const profile = {
 };
 
 export const contact = {
-  email: 'you@example.com',
+  email: 'andrewchiang228@gmail.com',
   github: 'https://github.com/Ping-Hsun-Chiang',
-  linkedin: 'https://www.linkedin.com/in/your-username',
+  linkedin: 'https://www.linkedin.com/in/andrew-chiang-a99a94321/',
 };
 
 // 技能：可自由新增分類或項目
