@@ -19,8 +19,11 @@ export const profile = {
   resumeUrl: '',
 };
 
+// 聯絡方式：留空的項目不會顯示
 export const contact = {
+  phone: '0934-343-515',
   email: 'andrewchiang228@gmail.com',
+  location: 'Tainan City, Taiwan',
   github: 'https://github.com/Ping-Hsun-Chiang',
   linkedin: 'https://www.linkedin.com/in/andrew-chiang-a99a94321/',
 };
