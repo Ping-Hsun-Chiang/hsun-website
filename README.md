@@ -26,13 +26,16 @@ npm run dev      # 開啟 http://localhost:4321
 ```md
 ---
 title: 專案名稱
-summary: 一句話說明這個專案
-date: 2026-01-01
+subtitle: English Title               # 選填，英文副標
+summary: 一句話說明這個專案（顯示在卡片上）
+date: 2026-01-01                      # 顯示為 2026.01，依日期由新到舊排序
 tags: [Python, React]
-github: https://github.com/xxx/xxx   # 選填
-demo: https://xxx.com                # 選填
-cover: /projects/my-project.png      # 選填
-order: 10                            # 選填，數字越小越前面
+github: https://github.com/xxx/xxx    # 選填
+demo: https://xxx.com                 # 選填
+paper: https://xxx                    # 選填，論文或文件連結
+cover: /projects/my-project.png       # 選填，沒填就不顯示圖片
+featured: true                        # 選填，置頂並以大卡片顯示
+private: true                         # 選填，標示為私人專案（原始碼未公開）
 ---
 
 ## 解決什麼問題

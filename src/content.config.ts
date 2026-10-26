@@ -6,15 +6,21 @@ const projects = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
   schema: z.object({
     title: z.string(),
+    // 英文副標（選填），顯示在標題下方
+    subtitle: z.string().optional(),
     summary: z.string(),
     date: z.coerce.date(),
     tags: z.array(z.string()).default([]),
-    // 封面圖：放在 public/projects/ 底下，填 '/projects/xxx.png'；不填會用色塊代替
+    // 封面圖：放在 public/projects/ 底下，填 '/projects/xxx.png'；不填就不顯示圖片
     cover: z.string().optional(),
     github: z.string().url().optional(),
     demo: z.string().url().optional(),
-    // 數字越小越前面；相同則依日期新到舊
-    order: z.number().default(100),
+    // 論文或其他文件連結
+    paper: z.string().url().optional(),
+    // 置頂：排在最前面並以大卡片顯示
+    featured: z.boolean().default(false),
+    // 私人專案：原始碼未公開
+    private: z.boolean().default(false),
   }),
 });
 

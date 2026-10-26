@@ -1,29 +1,29 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { formatMonth } from '../utils/project';
 
 interface Props {
   project: CollectionEntry<'projects'>;
 }
 
 const { project } = Astro.props;
-const { title, summary, tags, cover } = project.data;
+const { title, subtitle, summary, date, tags, cover, featured } = project.data;
+const isPrivate = project.data.private;
 const base = import.meta.env.BASE_URL;
 const href = `${base}projects/${project.id}/`;
 ---
 
-<a class="card project" href={href}>
-  {
-    cover ? (
-      <img class="cover" src={`${base}${cover.replace(/^\//, '')}`} alt={title} loading="lazy" />
-    ) : (
-      <div class="cover placeholder">
-        <span>{title}</span>
-      </div>
-    )
-  }
+<a class:list={['card', 'project', { featured }]} href={href}>
+  {cover && <img class="cover" src={`${base}${cover.replace(/^\//, '')}`} alt={title} loading="lazy" />}
   <div class="body">
+    <div class="meta">
+      <span>{formatMonth(date)}</span>
+      {featured && <span class="badge pin">置頂</span>}
+      {isPrivate && <span class="badge">私人專案</span>}
+    </div>
     <h3>{title}</h3>
-    <p>{summary}</p>
+    {subtitle && <p class="subtitle">{subtitle}</p>}
+    <p class="summary">{summary}</p>
     <div class="tags">{tags.map((t) => <span class="tag">{t}</span>)}</div>
   </div>
 </a>
@@ -47,35 +47,67 @@ const href = `${base}projects/${project.id}/`;
     object-fit: cover;
     border-bottom: 1px solid var(--border);
   }
-  .placeholder {
-    display: grid;
-    place-items: center;
-    /* 沒有封面圖時使用主色漸層 */
-    background: linear-gradient(135deg, var(--cover-from), var(--cover-to));
-  }
-  .placeholder span {
-    padding: 0 20px;
-    text-align: center;
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: rgb(255 255 255 / 0.95);
-    letter-spacing: 0.04em;
-  }
   .body {
     padding: 16px 18px 18px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     flex: 1;
+  }
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .badge {
+    font-size: 0.72rem;
+    padding: 0 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+  .pin {
+    border-color: var(--accent);
+    color: var(--accent);
   }
   h3 {
     margin: 0;
     font-size: 1.05rem;
   }
-  p {
-    margin: 0;
+  .subtitle {
+    margin: -4px 0 2px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  .summary {
+    margin: 0 0 4px;
     color: var(--muted);
     font-size: 0.92rem;
     flex: 1;
+  }
+
+  /* 置頂專案：橫跨整列；有封面圖時桌機左圖右文 */
+  .featured {
+    grid-column: 1 / -1;
+  }
+  @media (min-width: 761px) {
+    .featured {
+      flex-direction: row;
+    }
+    .featured .cover {
+      width: 40%;
+      aspect-ratio: auto;
+      min-height: 240px;
+      border-bottom: none;
+      border-right: 1px solid var(--border);
+    }
+    .featured .body {
+      padding: 24px 28px;
+    }
+    .featured h3 {
+      font-size: 1.25rem;
+    }
   }
 </style>
