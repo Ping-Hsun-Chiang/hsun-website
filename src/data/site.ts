@@ -31,12 +31,13 @@ export const contact = {
 
 // 技能：可自由新增分類或項目
 export const skills: { category: string; items: string[] }[] = [
-  { category: '程式語言', items: ['Python', 'R', 'JavaScript', 'HTML / CSS', 'Bash'] },
-  { category: 'AI / 機器學習框架', items: ['TensorFlow', 'Keras', 'Scikit-learn', 'JAX', 'XGBoost'] },
-  { category: '資料處理與分析', items: ['NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'SQL'] },
-  { category: '統計與建模', items: ['空間統計', '克利金模型', '非線性迴歸', '貝氏推論', '時間序列'] },
-  { category: '工程與開發工具', items: ['Git', 'Linux / WSL', 'Docker', 'Google Apps Script', 'REST API'] },
-  { category: '雲端 / 部署', items: ['GitHub Pages', 'Google Sheets API', 'Meta Graph API'] },
+  { category: '程式語言', items: ['Python', 'R', 'TypeScript', 'JavaScript', 'HTML / CSS', 'SQL'] },
+  { category: 'AI / 深度學習', items: ['TensorFlow', 'Keras', 'JAX', 'PyTorch', 'CNN', '遷移學習'] },
+  { category: '統計與建模', items: ['空間統計', '克利金模型', '機率模型', '蒙地卡羅模擬', '限制滿足演算法', '策略回測'] },
+  { category: '資料處理', items: ['Pandas', 'NumPy', 'Matplotlib', '敘述統計', '資料視覺化'] },
+  { category: '網站開發', items: ['Next.js', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Flask', 'Google Apps Script', 'RWD'] },
+  { category: '測試 / QA', items: ['測試案例設計', 'API 測試', '缺陷管理'] },
+  { category: '自動化與部署', items: ['Git', 'GitHub Actions', 'GitHub Pages', 'Vercel', 'Linux / WSL', 'REST API'] },
 ];
 
 // 經歷：由新到舊排列
