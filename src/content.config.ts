@@ -3,7 +3,8 @@ import { glob } from 'astro/loaders';
 
 // 專案的欄位定義：每個 src/content/projects/*.md 開頭的 --- 區塊都要符合這個格式
 const projects = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
+  // 底線開頭的檔案（例如 _template.md）不會被載入
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/projects' }),
   schema: z.object({
     title: z.string(),
     // 英文副標（選填），顯示在標題下方

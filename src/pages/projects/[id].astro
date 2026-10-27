@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { formatMonth } from '../../utils/project';
+import { assertProjectSections, formatMonth } from '../../utils/project';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -11,7 +11,8 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 const { title, subtitle, summary, date, tags, cover, github, demo, paper } = project.data;
 const isPrivate = project.data.private;
-const { Content } = await render(project);
+const { Content, headings } = await render(project);
+assertProjectSections(project.id, headings);
 const base = import.meta.env.BASE_URL;
 ---
 
