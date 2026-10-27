@@ -8,6 +8,19 @@ github: https://github.com/Ping-Hsun-Chiang/i-cheong-website
 demo: https://ping-hsun-chiang.github.io/i-cheong-website/
 ---
 
-<!-- TODO：補充專案說明（解決什麼問題、負責的部分、技術重點、成果） -->
+## 解決什麼問題
 
-為 SANY 三一集團臺灣授權經銷商建置的形象網站。
+為 SANY 三一集團臺灣授權經銷商建置形象網站。（詳細背景待補充）
+
+## 我負責的部分
+
+待補充。
+
+## 技術重點
+
+- 以 HTML / CSS / JavaScript 開發
+- 部署於 GitHub Pages
+
+## 成果
+
+- 網站已上線
