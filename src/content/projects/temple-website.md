@@ -3,7 +3,7 @@ title: 六興堂寺廟官方網站
 subtitle: Temple Website
 summary: 推動宮廟文化數位轉型的 RWD 官方網站，串接 Google Apps Script 實作隨喜捐款、線上祈福與擲筊，並開發不依賴外部 API 的 AI 廟務小幫手。
 date: 2026-04-01
-tags: [HTML, CSS, JavaScript, Google Apps Script, Full-stack]
+tags: [HTML, CSS, JavaScript, RWD, Google Apps Script, GitHub Pages]
 github: https://github.com/Ping-Hsun-Chiang/temple-website
 demo: https://ping-hsun-chiang.github.io/temple-website/
 ---

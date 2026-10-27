@@ -3,7 +3,7 @@ title: 營區站哨排班系統
 subtitle: ROCAF Roster
 summary: 以限制滿足（Constraint Satisfaction）演算法自動產生營區每日站哨表，保證歇哨與灰色時段規定，並依公平值分配勤務。
 date: 2026-10-01
-tags: [Next.js, TypeScript, Supabase, Constraint Satisfaction]
+tags: [Next.js, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Constraint Satisfaction, Vercel]
 github: https://github.com/Ping-Hsun-Chiang/ROCAF-roster
 demo: https://rocaf-roster.vercel.app
 ---

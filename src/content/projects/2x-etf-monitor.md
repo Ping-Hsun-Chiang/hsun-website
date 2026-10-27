@@ -3,7 +3,7 @@ title: 2X ETF 波段訊號監控
 subtitle: 2X ETF Monitor
 summary: 台股 2x 槓桿 ETF 的波段訊號監控工具，以 MA5 / MA20 / MA60 判斷進出場，搭配資本池分批投入與多策略回測，每個交易日由 GitHub Actions 自動更新。
 date: 2026-07-01
-tags: [Python, GitHub Actions, FinMind API, Backtesting, GitHub Pages]
+tags: [Python, Pandas, FinMind API, Backtesting, GitHub Actions, GitHub Pages]
 github: https://github.com/Ping-Hsun-Chiang/2X-ETF-monitor
 demo: https://ping-hsun-chiang.github.io/2X-ETF-monitor/
 ---

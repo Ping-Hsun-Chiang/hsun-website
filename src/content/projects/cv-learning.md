@@ -3,7 +3,7 @@ title: 基礎影像辨識學習
 subtitle: CV Learning
 summary: 從零開始的影像辨識學習專案，涵蓋基礎影像操作、CNN 訓練、遷移學習，到以自己拍攝的手機照片建立分類器。
 date: 2026-05-01
-tags: [Python, PyTorch, CNN, Transfer Learning]
+tags: [Python, PyTorch, Computer Vision, CNN, Transfer Learning]
 private: true
 ---
 
