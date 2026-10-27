@@ -3,7 +3,7 @@ title: 碩士論文
 subtitle: 'DeepKriging on the Sphere: Basis Adaptation for Spherical Data'
 summary: 獨立開發「球面深度克里金（Spherical DeepKriging）」預測架構，結合球面多解析度基底函數與深度神經網路，突破傳統 Kriging O(n³) 運算瓶頸，於 NASA AQUA 衛星全球大數據上全面優於泛克里金法。
 date: 2026-01-01
-tags: [TensorFlow, JAX, Python, Spatial Statistics, Deep Learning, Kriging]
+tags: [Python, TensorFlow, JAX, Deep Learning, Spatial Statistics, Kriging]
 paper: https://hdl.handle.net/11296/w533y6
 featured: true
 ---
