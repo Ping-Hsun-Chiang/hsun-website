@@ -8,6 +8,19 @@ github: https://github.com/Ping-Hsun-Chiang/slashie-store
 demo: https://slashie-store.vercel.app
 ---
 
-<!-- TODO：補充專案說明（解決什麼問題、負責的部分、技術重點、成果） -->
+## 解決什麼問題
 
-球鞋電商網站，提供預購代購、現貨球鞋（全新／二手）與配件販售。
+待補充。
+
+## 我負責的部分
+
+待補充。
+
+## 技術重點
+
+- 以 Next.js 與 TypeScript 開發
+- 部署於 Vercel
+
+## 成果
+
+- 網站已上線，提供預購代購、現貨球鞋（全新／二手）與配件販售

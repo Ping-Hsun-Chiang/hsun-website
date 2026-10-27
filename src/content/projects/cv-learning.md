@@ -7,15 +7,21 @@ tags: [Python, PyTorch, CNN, Transfer Learning]
 private: true
 ---
 
-<!-- 初版內容整理自 README，請再微調 -->
+## 解決什麼問題
 
-## 學習內容
+從零開始學習影像辨識，建立電腦視覺的基礎能力。
+
+## 我負責的部分
+
+個人學習專案。
+
+## 技術重點
 
 - 基礎影像操作
 - 卷積神經網路（CNN）訓練
 - 遷移學習（Transfer Learning）
+- 以 conda 建立 Python 3.11 環境並安裝 PyTorch，提供一鍵安裝腳本，支援 CPU 與 NVIDIA GPU（CUDA）
+
+## 成果
+
 - 以自己拍攝的手機照片建立影像分類器
-
-## 環境
-
-以 conda 建立 Python 3.11 環境並安裝 PyTorch，提供一鍵安裝腳本；支援 CPU 與 NVIDIA GPU（CUDA）。
