@@ -12,10 +12,6 @@ demo: https://ping-hsun-chiang.github.io/temple-website/
 
 推動傳統宮廟文化的數位轉型，讓信眾能在線上使用廟務服務。
 
-## 我負責的部分
-
-獨立開發整個官方網站，包含前端介面、輕量後端串接與互動流程設計。
-
 ## 技術重點
 
 - **響應式前端**：以 HTML5、CSS3 與純 JavaScript（Vanilla JS）開發 RWD 網站

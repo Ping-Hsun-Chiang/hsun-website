@@ -12,10 +12,6 @@ demo: https://ping-hsun-chiang.github.io/i-cheong-website/
 
 為 SANY 三一集團臺灣授權經銷商建置形象網站。（詳細背景待補充）
 
-## 我負責的部分
-
-待補充。
-
 ## 技術重點
 
 - 以 HTML / CSS / JavaScript 開發

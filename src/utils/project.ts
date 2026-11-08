@@ -16,8 +16,8 @@ export function formatMonth(date: Date) {
   return `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}`;
 }
 
-// 專案內文必須依序包含這四個 ## 標題
-export const PROJECT_SECTIONS = ['解決什麼問題', '我負責的部分', '技術重點', '成果'];
+// 專案內文必須依序包含這三個 ## 標題
+export const PROJECT_SECTIONS = ['解決什麼問題', '技術重點', '成果'];
 
 // 格式不符時讓 build 失敗，避免格式不一致的專案被部署上線
 export function assertProjectSections(id: string, headings: { depth: number; text: string }[]) {

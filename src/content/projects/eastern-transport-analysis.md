@@ -10,10 +10,6 @@ tags: [R, Descriptive Statistics, Data Visualization, Public Policy]
 
 協助主管機關掌握花東地區公共運輸的使用現況，作為政策優化的依據。
 
-## 我負責的部分
-
-擔任計畫負責人，負責資料蒐集、分析與報告撰寫。
-
 ## 技術重點
 
 - 蒐集並整合花東地區公共運輸資料

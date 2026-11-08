@@ -12,10 +12,6 @@ demo: https://slashie-store.vercel.app
 
 待補充。
 
-## 我負責的部分
-
-待補充。
-
 ## 技術重點
 
 - 以 Next.js 與 TypeScript 開發

@@ -22,7 +22,7 @@ Ping-Hsun Chiang 的個人履歷網站：簡介、學歷、經歷、技能、聯
 這個網站的目標是：
 
 - **內容和版面分開：** 更新履歷只需要改資料，不用碰任何版面程式碼。
-- **專案介紹格式一致：** 每個專案都回答同樣的四個問題，招募方可以快速比較。
+- **專案介紹格式一致：** 每個專案都回答同樣的三個問題，招募方可以快速比較。
 - **格式錯誤不會上線：** 漏寫段落或欄位填錯時，在部署前就擋下來。
 
 ## 功能
@@ -30,7 +30,7 @@ Ping-Hsun Chiang 的個人履歷網站：簡介、學歷、經歷、技能、聯
 - **首頁：** 自我介紹、關於我、學歷、聯絡方式、技能、經歷時間軸、專案作品集。
 - **專案卡片：** 顯示日期、標題、英文副標、一句話摘要與技術標籤；**置頂**專案以大卡片排在最前面，
   **私人專案**（原始碼未公開）會加上標記。
-- **專案詳情頁：** 每個專案一頁，提供 GitHub、線上 Demo、論文等連結，內文固定為四個段落。
+- **專案詳情頁：** 每個專案一頁，提供 GitHub、線上 Demo、論文等連結，內文固定為三個段落。
 - **深色模式：** 跟隨系統設定（`prefers-color-scheme`）。
 - **響應式設計：** 手機、平板、桌機都能閱讀。
 
@@ -54,12 +54,11 @@ Ping-Hsun Chiang 的個人履歷網站：簡介、學歷、經歷、技能、聯
 
 1. **Frontmatter 欄位**（[`src/content.config.ts`](src/content.config.ts)）：以 Zod schema 定義欄位型別，
    例如 `date` 必須是日期、`github`／`demo`／`paper` 必須是合法網址、`featured`／`private` 為布林值。
-2. **內文段落**（[`src/utils/project.ts`](src/utils/project.ts)）：內文的 `##` 標題必須**依序**為以下四個，
+2. **內文段落**（[`src/utils/project.ts`](src/utils/project.ts)）：內文的 `##` 標題必須**依序**為以下三個，
    錯誤訊息會指出哪個專案、目前寫了哪些標題：
 
    ```md
    ## 解決什麼問題
-   ## 我負責的部分
    ## 技術重點
    ## 成果
    ```
@@ -95,7 +94,7 @@ npm run build     # 建置並執行上述兩層檢查
 
 1. 複製 `src/content/projects/_template.md` 並改名，例如 `my-project.md`（檔名會成為網址 `/projects/my-project/`）。
 2. 填寫 frontmatter：`title`、`summary`、`date` 為必填；`subtitle`、`tags`、`github`、`demo`、`paper`、`cover`、`featured`、`private` 為選填。
-3. 保留四個 `##` 標題，填入內文。
+3. 保留三個 `##` 標題，填入內文。
 4. 執行 `npm run build` 確認通過，再 push。
 
 ## 部署

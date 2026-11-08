@@ -11,10 +11,6 @@ github: https://github.com/Ping-Hsun-Chiang/game-probability-model
 
 設計一套兼顧玩家體驗與公司風控的老虎機遊戲數學模型，目標為 RTP = 95%、高波動性（σ ≈ 7.77）。
 
-## 我負責的部分
-
-完整的數學模型設計、理論推導與模擬驗證。
-
 ## 技術重點
 
 - **數學建模**：從賠付表設計出發，推導 Variance 與 Hit Frequency

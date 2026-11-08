@@ -15,10 +15,6 @@ github: https://github.com/Ping-Hsun-Chiang/goscoot-qa-training
 - **車輛端（IoT）**：每 10 秒回傳 GPS 與電量，低電量降速／鎖車邏輯
 - **營運端（後台 Web）**：即時軌跡、強制解鎖／鎖定、退費處理
 
-## 我負責的部分
-
-個人學習專案。
-
 ## 技術重點
 
 分為四個演練階段：
