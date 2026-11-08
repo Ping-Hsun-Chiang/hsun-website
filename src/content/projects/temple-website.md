@@ -1,24 +1,26 @@
 ---
 title: 六興堂寺廟官方網站
 subtitle: Temple Website
-summary: 推動宮廟文化數位轉型的 RWD 官方網站，串接 Google Apps Script 實作隨喜捐款、線上祈福與擲筊，並開發不依賴外部 API 的 AI 廟務小幫手。
+summary: 推廣地方宮廟的官方網站，介紹沿革、神明與活動，並延伸提供線上捐款、祈福與擲筊，以及廟務小幫手與 AI 祈福回應。
 date: 2026-04-01
-tags: [HTML, CSS, JavaScript, RWD, Google Apps Script, GitHub Pages]
+tags: [HTML, CSS, JavaScript, RWD, Google Apps Script, Gemini API, GitHub Pages]
 github: https://github.com/Ping-Hsun-Chiang/temple-website
 demo: https://ping-hsun-chiang.github.io/temple-website/
 ---
 
 ## 解決什麼問題
 
-推動傳統宮廟文化的數位轉型，讓信眾能在線上使用廟務服務。
+地方宮廟的資訊多半散落在看板與社群貼文中，外地信眾與年輕一代不易認識。這個網站以推廣宮廟文化為主，同時把原本只能到現場辦理的服務搬到線上。
 
 ## 技術重點
 
-- **響應式前端**：以 HTML5、CSS3 與純 JavaScript（Vanilla JS）開發 RWD 網站
-- **輕量後端**：串接 Google Apps Script Web App，實作「隨喜捐款」、「線上祈福」與「線上擲筊」等完整線上服務流程
-- **不依賴外部 API 的互動模組**：透過前端本地知識庫與邏輯判斷，開發「AI 廟務小幫手」與「祈福安心回應模組」，依使用者的關鍵字與情緒給予情境化回應
+- **AI 祈福回應**：串接 Gemini 針對信眾的祈願內容生成回應，並以 system prompt 規範宗教場景下的語氣與界線
+- **金鑰保護**：以 Google Apps Script 作為代理，讓純靜態網站也能安全呼叫 LLM，API 金鑰不會暴露在前端
+- **免付費 API 的廟務小幫手**：在瀏覽器端以模糊比對回答常見問題，廟方可自行維護問答內容
+- **零月費架構**：部署於 GitHub Pages，後端僅使用 Apps Script 免費額度
 
 ## 成果
 
-- 完成具備完整線上服務流程的寺廟官方網站並上線
-- 展現前端介面開發、輕量後端整合與創新互動流程設計的實務能力
+- 網站上線，完整呈現宮廟沿革、神明、活動與相片
+- 提供隨喜捐款、線上祈福、線上擲筊三項線上服務，外地信眾也能參與
+- 零月費運作，符合宮廟預算
