@@ -32,11 +32,10 @@ export const contact = {
 // 技能：可自由新增分類或項目
 export const skills: { category: string; items: string[] }[] = [
   { category: '程式語言', items: ['Python', 'R', 'TypeScript', 'JavaScript', 'HTML / CSS', 'SQL'] },
-  { category: 'AI / 深度學習', items: ['TensorFlow', 'Keras', 'JAX', 'PyTorch', 'CNN', '遷移學習'] },
+  { category: 'AI / 深度學習', items: ['TensorFlow', 'Keras', 'JAX'] },
   { category: '統計與建模', items: ['空間統計', '克利金模型', '機率模型', '蒙地卡羅模擬', '限制滿足演算法', '策略回測'] },
   { category: '資料處理', items: ['Pandas', 'NumPy', 'Matplotlib', '敘述統計', '資料視覺化'] },
-  { category: '網站開發', items: ['Next.js', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Flask', 'Google Apps Script', 'RWD'] },
-  { category: '測試 / QA', items: ['測試案例設計', 'API 測試', '缺陷管理'] },
+  { category: '網站開發', items: ['Next.js', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Google Apps Script', 'RWD'] },
   { category: '自動化與部署', items: ['Git', 'GitHub Actions', 'GitHub Pages', 'Vercel', 'Linux / WSL', 'REST API'] },
 ];
 

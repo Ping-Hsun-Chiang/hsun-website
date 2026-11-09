@@ -4,7 +4,8 @@ subtitle: GoScoot QA Training
 summary: 以智慧共享滑板車系統為情境的 QA 工程師訓練專案，涵蓋需求分析、測試案例設計、API 測試、缺陷管理與自動化測試策略。
 date: 2026-05-01
 tags: [Python, Flask, QA, Test Case Design, API Testing]
-github: https://github.com/Ping-Hsun-Chiang/goscoot-qa-training
+private: true
+hidden: true
 ---
 
 ## 解決什麼問題

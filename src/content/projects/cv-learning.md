@@ -5,6 +5,7 @@ summary: 從零開始的影像辨識學習專案，涵蓋基礎影像操作、CN
 date: 2026-05-01
 tags: [Python, PyTorch, Computer Vision, CNN, Transfer Learning]
 private: true
+hidden: true
 ---
 
 ## 解決什麼問題

@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 import { assertProjectSections, formatMonth } from '../../utils/project';
 
 export async function getStaticPaths() {
-  const projects = await getCollection('projects');
+  const projects = await getCollection('projects', ({ data }) => !data.hidden);
   return projects.map((project) => ({ params: { id: project.id }, props: { project } }));
 }
 

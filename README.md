@@ -53,7 +53,7 @@ Ping-Hsun Chiang 的個人履歷網站：簡介、學歷、經歷、技能、聯
 專案使用 Astro Content Collections，在 **build 階段**做兩層檢查，任何一層不通過，GitHub Actions 就不會部署：
 
 1. **Frontmatter 欄位**（[`src/content.config.ts`](src/content.config.ts)）：以 Zod schema 定義欄位型別，
-   例如 `date` 必須是日期、`github`／`demo`／`paper` 必須是合法網址、`featured`／`private` 為布林值。
+   例如 `date` 必須是日期、`github`／`demo`／`paper` 必須是合法網址、`featured`／`private`／`hidden` 為布林值。
 2. **內文段落**（[`src/utils/project.ts`](src/utils/project.ts)）：內文的 `##` 標題必須**依序**為以下三個，
    錯誤訊息會指出哪個專案、目前寫了哪些標題：
 
@@ -93,7 +93,7 @@ npm run build     # 建置並執行上述兩層檢查
 ### 新增專案
 
 1. 複製 `src/content/projects/_template.md` 並改名，例如 `my-project.md`（檔名會成為網址 `/projects/my-project/`）。
-2. 填寫 frontmatter：`title`、`summary`、`date` 為必填；`subtitle`、`tags`、`github`、`demo`、`paper`、`cover`、`featured`、`private` 為選填。
+2. 填寫 frontmatter：`title`、`summary`、`date` 為必填；`subtitle`、`tags`、`github`、`demo`、`paper`、`cover`、`featured`、`private`、`hidden` 為選填；`hidden: true` 可暫時隱藏專案而不刪除檔案。
 3. 保留三個 `##` 標題，填入內文。
 4. 執行 `npm run build` 確認通過，再 push。
 

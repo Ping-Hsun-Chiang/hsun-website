@@ -13,7 +13,7 @@ const initials = profile.name
   .slice(0, 3)
   .toUpperCase();
 
-const projects = sortProjects(await getCollection('projects'));
+const projects = sortProjects(await getCollection('projects', ({ data }) => !data.hidden));
 ---
 
 <Base>

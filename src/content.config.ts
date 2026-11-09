@@ -22,6 +22,8 @@ const projects = defineCollection({
     featured: z.boolean().default(false),
     // 私人專案：原始碼未公開
     private: z.boolean().default(false),
+    // 暫時隱藏：不顯示在網站上，也不產生專案頁（檔案保留，改回 false 即可恢復）
+    hidden: z.boolean().default(false),
   }),
 });
 
