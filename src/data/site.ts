@@ -21,7 +21,7 @@ export const profile = {
     '期望投入資料分析、資料科學、機器學習或品質驗證相關職務，以統計的嚴謹，搭配 AI 工具帶來的學習與開發效率，為團隊創造價值。',
   ] as (string | { title: string; desc: string }[])[],
   // 大頭照：把圖片放到 public/ 底下（例如 public/avatar.jpg），再填 '/avatar.jpg'；留空則顯示姓名縮寫
-  avatar: '',
+  avatar: '/avatar.jpg',
   // PDF 履歷：把檔案放到 public/resume.pdf，再填 '/resume.pdf'；留空則不顯示按鈕
   resumeUrl: '',
 };
