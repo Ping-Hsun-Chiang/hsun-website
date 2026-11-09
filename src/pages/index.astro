@@ -52,7 +52,22 @@ const projects = sortProjects(await getCollection('projects', ({ data }) => !dat
     <div class="card pad">
       <h2 class="section-title">關於我</h2>
       <div class="about">
-        {profile.about.map((p) => <p class="about-p">{p}</p>)}
+        {
+          profile.about.map((block) =>
+            typeof block === 'string' ? (
+              <p class="about-p">{block}</p>
+            ) : (
+              <ul class="about-list">
+                {block.map((item) => (
+                  <li>
+                    <strong>{item.title}：</strong>
+                    <span>{item.desc}</span>
+                  </li>
+                ))}
+              </ul>
+            ),
+          )
+        }
       </div>
     </div>
   </section>
@@ -218,6 +233,20 @@ const projects = sortProjects(await getCollection('projects', ({ data }) => !dat
   }
   .about-p {
     margin: 0 0 10px;
+  }
+  .about-list {
+    list-style: none;
+    margin: 4px 0 14px;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+  }
+  .about-list li {
+    padding-left: 12px;
+    border-left: 3px solid var(--accent);
+  }
+  .about-list span {
+    color: var(--muted);
   }
   .stack {
     display: flex;
