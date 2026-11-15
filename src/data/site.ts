@@ -39,7 +39,7 @@ export const contact = {
 export const skills: { category: string; items: string[] }[] = [
   { category: '程式語言', items: ['Python', 'R', 'TypeScript', 'JavaScript', 'HTML / CSS', 'SQL'] },
   { category: 'AI / 深度學習', items: ['TensorFlow', 'Keras', 'JAX', 'Hugging Face'] },
-  { category: 'LLM 應用', items: ['RAG', 'LangChain', 'Prompt Engineering', '向量資料庫（ChromaDB）', '本機 LLM 部署（Ollama）'] },
+  { category: 'LLM 應用', items: ['RAG', 'LangChain','向量資料庫（ChromaDB）', '本機 LLM 部署（Ollama）'] },
   { category: '統計與建模', items: ['空間統計', '克利金模型', '機率模型', '蒙地卡羅模擬', '限制滿足演算法', '策略回測'] },
   { category: '資料處理', items: ['Pandas', 'NumPy', 'Matplotlib', '敘述統計', '資料視覺化'] },
   { category: '網站開發', items: ['Next.js', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Google Apps Script', 'RWD'] },
