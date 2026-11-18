@@ -5,20 +5,20 @@
 
 export const profile = {
   name: 'Ping-Hsun Chiang',
-  title: '資料分析｜統計建模｜機器學習',
+  title: '資料分析｜統計建模｜機器學習｜品質工程',
   // Hero 區塊的一句話介紹
   tagline: '喜歡把重複的工作交給程式，把時間留給真正需要思考的問題。',
   // 關於我：字串是一段文字；陣列是條列清單（每項有粗體標題 title 與說明 desc）
   about: [
-    '國立東華大學數學統計碩士，具備扎實的數理統計基礎，以及資料分析與機器學習的實作經驗。做事習慣從問題本身出發：先釐清需求、提出解決方向，再以數據與程式驗證，最終將成果落地。',
-    '熟悉以 Python、R 與 SQL 進行資料分析與統計建模，涵蓋機率模型、空間統計與蒙地卡羅模擬；並具備深度學習、網頁系統開發與自動化部署（GitHub Actions）的實作經驗。',
+    '國立東華大學應用數學系統計碩士，具備扎實的數理統計基礎，以及資料分析與機器學習的實作經驗。做事習慣從問題本身出發：先釐清需求、提出解決方向，再以數據與程式驗證，最終將成果落地。',
+    '熟悉以 Python、R 與 SQL 進行資料分析與統計建模，涵蓋機率模型、空間統計與蒙地卡羅模擬；具備深度學習與 LLM 應用的開發經驗，並熟悉 SPC、MSA、AQL 等品質工程手法，也能獨立完成網頁系統開發與自動化部署。',
     [
       { title: '資料分析', desc: '從資料清洗到視覺化，產出能支援決策的分析報告' },
-      { title: '模型開發', desc: '建立預測模型，並以統計方法驗證其可靠性' },
-      { title: '品質驗證', desc: '設計測試情境與自動化驗證流程，確保系統結果正確' },
-      { title: '自動化與落地', desc: '建立資料管線，將分析成果做成實際使用的系統' },
+      { title: '模型開發', desc: '建立統計、機器學習與 LLM 模型，並以統計方法驗證其可靠性' },
+      { title: '品質工程', desc: '運用管制圖、製程能力與量測系統分析判斷品質，並以 8D 追蹤問題根因' },
+      { title: '自動化與落地', desc: '建立資料管線與自動化測試，將分析成果做成實際使用的系統' },
     ],
-    '期望投入資料分析、資料科學、機器學習或品質驗證相關職務，以統計的嚴謹，搭配 AI 工具帶來的學習與開發效率，為團隊創造價值。',
+    '期望投入資料分析、資料科學、機器學習或品質工程相關職務，以統計的嚴謹，搭配 AI 工具帶來的學習與開發效率，為團隊創造價值。',
   ] as (string | { title: string; desc: string }[])[],
   // 大頭照：把圖片放到 public/ 底下（例如 public/avatar.jpg），再填 '/avatar.jpg'；留空則顯示姓名縮寫
   avatar: '/avatar.jpg',
@@ -39,7 +39,7 @@ export const contact = {
 export const skills: { category: string; items: string[] }[] = [
   { category: '程式語言', items: ['Python', 'R', 'TypeScript', 'JavaScript', 'HTML / CSS', 'SQL'] },
   { category: 'AI / 深度學習', items: ['TensorFlow', 'Keras', 'JAX', 'Hugging Face'] },
-  { category: 'LLM 應用', items: ['RAG', 'LangChain', '向量資料庫（ChromaDB）', '本機 LLM 部署（Ollama）'] },
+  { category: 'LLM 應用', items: ['RAG', 'LangChain', 'ChromaDB', 'Ollama'] },
   { category: '統計與建模', items: ['空間統計', '克利金模型', '機率模型', '蒙地卡羅模擬', '限制滿足演算法', '策略回測'] },
   { category: '品質工程', items: ['SPC 統計製程管制', '製程能力分析（Cpk）', 'MSA / GR&R', 'AQL 抽樣檢驗', '8D 問題解決', 'FMEA'] },
   { category: '資料處理', items: ['Pandas', 'NumPy', 'Matplotlib', '敘述統計', '資料視覺化'] },
