@@ -5,5 +5,5 @@ summary: 'Hao-Yun Huang, Wen-Ting Wang, Ping-Hsun Chiang & Wei-Ying Wu. Japanese
 date: 2026-08-06
 tags: [Original Paper, Open Access, Springer]
 link: https://doi.org/10.1007/s42081-026-00371-z
-priority: 1
+featured: true
 ---
