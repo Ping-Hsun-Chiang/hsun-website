@@ -9,6 +9,8 @@ github: https://github.com/xxx/xxx    # 選填
 demo: https://xxx.com                 # 選填
 paper: https://xxx                    # 選填，論文或文件連結
 cover: /projects/my-project.png       # 選填，沒填就不顯示圖片
+link: https://doi.org/xxx             # 選填，卡片直接連到外部網址，不產生專案頁（內文可省略）
+priority: 0                           # 選填，數字越大越前面（排在置頂專案之後）
 featured: false                       # 選填，置頂並以大卡片顯示
 private: false                        # 選填，標示為私人專案（原始碼未公開）
 hidden: false                         # 選填，暫時隱藏（不顯示於網站，也不產生專案頁）

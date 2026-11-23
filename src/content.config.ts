@@ -18,6 +18,10 @@ const projects = defineCollection({
     demo: z.string().url().optional(),
     // 論文或其他文件連結
     paper: z.string().url().optional(),
+    // 外部連結：卡片直接連到這個網址（例如期刊論文的 DOI），不產生專案頁、內文可留空
+    link: z.string().url().optional(),
+    // 排序權重：數字越大越前面（排在置頂專案之後、其餘依日期排序之前）
+    priority: z.number().default(0),
     // 置頂：排在最前面並以大卡片顯示
     featured: z.boolean().default(false),
     // 私人專案：原始碼未公開
